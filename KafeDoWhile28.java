@@ -11,14 +11,11 @@ public class KafeDoWhile28 {
         String namaPelanggan;
 
         do {
-
             System.out.print("Masukkan nama pelanggan. Ketik 'batal' untuk keluar: ");
             namaPelanggan = sc.nextLine();
-
-            if (namaPelanggan.equals("batal")) {
+            if (namaPelanggan.equalsIgnoreCase("batal")) {
                 break;
             }
-
             System.out.print("Jumlah kopi: ");
             kopi = sc.nextInt();
             System.out.print("Jumlah teh: ");
@@ -26,9 +23,9 @@ public class KafeDoWhile28 {
             System.out.print("Jumlah roti: ");
             roti = sc.nextInt();
 
+            sc.nextLine(); // Membersihkan buffer input
             int totalHarga = (kopi * hargaKopi) + (teh * hargaTeh) + (roti * hargaRoti);
-            System.out.println("Total yang harus dibbayar: Rp" + totalHarga);
-
+            System.out.println("Total yang harus dibayar: Rp" + totalHarga);
         } while (true);
 
         System.out.println("Semua transaksi selesai.");
