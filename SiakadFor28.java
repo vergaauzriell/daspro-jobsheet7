@@ -6,6 +6,7 @@ public class SiakadFor28 {
 
         Scanner sc = new Scanner(System.in);
 
+        int lulus = 0, tidakLulus = 0;
         double nilai, tertinggi = 0, terendah = 100;
 
         for (int i = 1; i <= 10; i++) {
@@ -16,6 +17,11 @@ public class SiakadFor28 {
             }
             if(nilai < terendah) {
                 terendah = nilai;
+            }
+            if (nilai >=60) {
+                lulus++;
+            } else {
+                tidakLulus++;
             }
         }
 
